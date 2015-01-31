@@ -11,6 +11,14 @@
  *      <?php echo get_theme_mod('HOOK_NAME', DEFAULT_VALUE); ?>
  */
 
+function get(&$var, $default=null){
+    try{
+        return isset($var) ? $var : $default;
+    } catch(Exception $e){
+        return $default;
+    }
+}
+
 function themeSupportDeclaration(){
     add_theme_support("menus");
     add_theme_support("html5");
