@@ -1,0 +1,14 @@
+{
+  "name": "causes",
+  "version": "0.0.1",
+  "authors": [
+    "Noah Huppert <noahhuppert@gmail.com>"
+  ],
+  "description": "A Wordpress theme for cau-ses.net",
+  "license": "MIT",
+  "homepage": "cau-ses.net",
+  "private": true,
+  "devDependencies": {
+    "materialize": "~0.95.1"
+  }
+}

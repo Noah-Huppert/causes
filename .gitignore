@@ -1,0 +1,6 @@
+#Bower
+libs
+
+#Intellij Idea
+.idea
+*.iml
