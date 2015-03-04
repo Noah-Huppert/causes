@@ -1,6 +1,9 @@
 #Bower
 libs
 
+#Sass
+.sass-cache
+
 #Intellij Idea
 .idea
 *.iml

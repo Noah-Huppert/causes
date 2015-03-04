@@ -11,8 +11,24 @@ Tags: responsive-layout, custom-background, custom-colors, full-width-template, 
 Text Domain: causes
 */
 
-/*    Header */
-/* Nav Bar */
-nav .sub-menu{
-  
+/*
+Classes defined by Wordpress Customizer
+
+background-primary
+background-secondary
+
+color-primary
+color-secondary
+*/
+
+/* Header */
+/*    Nav Bar */
+.brand-logo{
+    margin-left: 10px;
+}
+
+@media (max-width: 992px){
+  #nav-mobile{
+    top: auto;
+  }
 }

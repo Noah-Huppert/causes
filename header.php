@@ -13,7 +13,7 @@
     <body>
     <div class="navbar-fixed">
         <nav>
-            <div class="nav-wrapper">
+            <div class="nav-wrapper background-primary">
                 <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full"><i class="left mdi-navigation-menu"></i></a>
                 <a href="<?php echo bloginfo('url'); ?>" class="brand-logo"><?php echo bloginfo("name"); ?></a>
                 <?php
@@ -21,23 +21,23 @@
                     //Before menu, create container
                     public function start_lvl(&$output, $depth = 0, $args = array()){
                         if(isset($args->walker->has_children) && $args->walker->has_children) {
-                            $output .= "<ul id=\"dropdown1\" class=\"dropdown-content\">";
+                            $output .= "<ul id=\"causes-main-nav-dropdown\" class=\"dropdown-content\">";
                         } else{
                             $output .= "<ul id=\"nav-mobile\" class=\"right side-nav\">";
                         }
                     }
-                    
+
                     //After menu, closes container
                     public function end_lvl(&$output, $depth = 0, $args = array()){
                         $output .= "</ul>";
                     }
-                    
+
                     //Start of item
                     public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0){
                         $output .= "<li>";
 
                         if(isset($args->walker->has_children) && $args->walker->has_children) {
-                            $output .= "<a class=\"dropdown-button\" href=\"#!\" title=\"$item->attr_tittle\" data-activates=\"dropdown1\">";
+                            $output .= "<a class=\"dropdown-button\" href=\"#!\" title=\"$item->attr_tittle\" data-activates=\"causes-main-nav-dropdown\">";
                             $output .= "<i class=\"mdi-navigation-arrow-drop-down right\"></i>";
                         } else {
                             $output .= "<a data-id=\"$id\" title=\"$item->attr_title\" target=\"$item->target\" rel=\"$item->xfn\" href=\"$item->url\">";
@@ -46,13 +46,13 @@
                         $output .= apply_filters( 'the_title', $item->title, $item->ID );
                         $output .= "</a>";
                     }
-                    
+
                     //End of item
                     public function end_el( &$output, $item, $depth = 0, $args = array() ) {
                         $output .= "</li>";
                     }
                 }
-                
+
                 $menuConfig = array(
                     "container" => false,
                     "menu_id" => "nav-mobile",

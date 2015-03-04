@@ -10,7 +10,22 @@ License URI: https://github.com/Noah-Huppert/causes/blob/master/LICENSE
 Tags: responsive-layout, custom-background, custom-colors, full-width-template, post-formats, theme-options
 Text Domain: causes
 */
-/*    Header */
-/* Nav Bar */
+/*
+Classes defined by Wordpress Customizer
+
+background-primary
+background-secondary
+
+color-primary
+color-secondary
+*/
+/* Header */
+/*    Nav Bar */
+.brand-logo {
+  margin-left: 10px; }
+
+@media (max-width: 992px) {
+  #nav-mobile {
+    top: auto; } }
 
 /*# sourceMappingURL=style.css.map */
