@@ -10,19 +10,26 @@
  * These Customizer options can be used inline like so:
  *      <?php echo get_theme_mod('HOOK_NAME', DEFAULT_VALUE); ?>
  */
+ function getCustomizerDefaults(){
+   return array(
+     "primary_color" => "#00BCD4",
+     "secondary_color" => "#F6115F",
+     "copyright_notice" =>"©"
+   );
+ }
 
 function themeCustomizerRegister($wp_customize){
   /* Add Settings */
   $wp_customize->add_setting("primary_color", array(
-    "default" => "#F6115F"
+    "default" => getCustomizerDefaults()["primary_color"]
   ));
 
   $wp_customize->add_setting("secondary_color", array(
-    "default" => "#00BCD4"
+    "default" => getCustomizerDefaults()["secondary_color"]
   ));
 
   $wp_customize->add_setting("copyright_notice", array(
-    "default" => "©" . get_bloginfo("name")
+    "default" => getCustomizerDefaults()["copyright_notice"] . get_bloginfo("name")
   ));
 
   /* Add Setting Controls */
@@ -60,11 +67,11 @@ function themeCustomizerRegister($wp_customize){
 function themeCustomizerCSSInject(){
   echo "<style>";
 
-  echo ".background-primary{background-color: " . get_theme_mod("primary_color", "#F6115F") . " !important;}";
-  echo ".background-secondary{background-color: " . get_theme_mod("secondary_color", "#00BCD4") . " !important;}";
+  echo ".background-primary{background-color: " . get_theme_mod("primary_color", getCustomizerDefaults()["primary_color"]) . " !important;}";
+  echo ".background-secondary{background-color: " . get_theme_mod("secondary_color", getCustomizerDefaults()["secondary_color"]) . " !important;}";
 
-  echo ".color-primary{color: " . get_theme_mod("primary_color", "#F6115F") . " !important;}";
-  echo ".color-secondary{color: " . get_theme_mod("secondary_color", "#00BCD4") . " !important;}";
+  echo ".color-primary{color: " . get_theme_mod("primary_color", getCustomizerDefaults()["primary_color"]) . " !important;}";
+  echo ".color-secondary{color: " . get_theme_mod("secondary_color", getCustomizerDefaults()["secondary_color"]) . " !important;}";
 
   echo "</style>";
 }

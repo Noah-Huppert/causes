@@ -2,15 +2,20 @@
 <html>
     <head>
         <?php wp_head()//Declare <head> tag for plugin compatibility ?>
-        <link href="<?php echo get_template_directory_uri(); ?>/style.css" type="text/css" rel="stylesheet"/>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
         <link href="<?php echo get_template_directory_uri(); ?>/libs/materialize/dist/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="<?php echo get_template_directory_uri(); ?>/style.css" type="text/css" rel="stylesheet"/>
 
         <script src="<?php echo get_template_directory_uri(); ?>/libs/jquery/dist/jquery.min.js"></script>
         <script src="<?php echo get_template_directory_uri(); ?>/libs/materialize/dist/js/materialize.min.js"></script>
         <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
     </head>
 
-    <body>
+    <body class="background-primary">
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper background-primary">

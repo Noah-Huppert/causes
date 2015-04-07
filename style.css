@@ -10,16 +10,23 @@ License URI: https://github.com/Noah-Huppert/causes/blob/master/LICENSE
 Tags: responsive-layout, custom-background, custom-colors, full-width-template, post-formats, theme-options
 Text Domain: causes
 */
-/*
-Classes defined by Wordpress Customizer
+/* Global */
+html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif; }
 
-background-primary
-background-secondary
+body {
+  height: 100%; }
 
-color-primary
-color-secondary
-*/
+a {
+  color: white; }
+
 /* Header */
+/* WP Bar */
+#wpadminbar {
+  position: fixed;
+  top: 0; }
+
 /*    Nav Bar */
 .brand-logo {
   margin-left: 10px; }
@@ -27,5 +34,40 @@ color-secondary
 @media (max-width: 992px) {
   #nav-mobile {
     top: auto; } }
+/* Footer */
+.page-footer {
+  margin-top: 40px !important;
+  box-shadow: 0px -3px 8px gray; }
+  .page-footer .col {
+    text-align: center; }
+  .page-footer #footer-recent-posts .card p {
+    height: 170px;
+    overflow: hidden; }
+  .page-footer #footer-divider {
+    width: 100%;
+    height: 2px;
+    opacity: 0.6;
+    margin-bottom: 30px; }
+
+/* Default Page Template */
+.content {
+  max-width: 800px;
+  width: 100%;
+  height: calc(100% - 84px);
+  bottom: calc(100% - 84px);
+  margin: auto;
+  margin-top: 20px;
+  background: white;
+  box-shadow: 0px 0px 10px gray; }
+  .content .title {
+    min-width: 150px;
+    padding: 15px;
+    padding-bottom: 2px;
+    display: inline-block;
+    font-size: 36px;
+    font-weight: bold;
+    border-bottom: 2px solid black; }
+  .content .body {
+    padding: 10px; }
 
 /*# sourceMappingURL=style.css.map */
