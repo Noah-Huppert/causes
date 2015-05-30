@@ -1,6 +1,14 @@
     <?php wp_footer()//Declare </body> for plugin compatibility ?>
 
+      <?php 
+        global $footer_show_recent_posts;
+        if(!isset($footer_show_recent_posts)){
+          $footer_show_recent_posts = true;
+        }
+      ?>
+
       <footer class="page-footer background-primary">
+        <?php if($footer_show_recent_posts): ?>
         <div class="container" id="footer-recent-posts">
           <div class="row">
             <?php foreach(get_posts(array("posts_per_page"=>6)) as $post) : setup_postdata($post); ?>
@@ -8,7 +16,7 @@
                 <div class="card">
                   <div class="card-content">
                     <span class="card-title color-secondary"><?php echo get_the_title(); ?></span>
-                    <p><?php echo substr(get_the_content(), 0, 250); ?></p>
+                    <p><?php echo get_the_excerpt(); ?></p>
                   </div>
 
                   <div class="card-action">
@@ -25,6 +33,7 @@
         </div>
 
         <div class="background-secondary" id="footer-divider"></div>
+        <?php endif ?>
 
         <div class="container">
           <div class="row">

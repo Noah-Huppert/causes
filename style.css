@@ -21,6 +21,10 @@ body {
 a {
   color: white; }
 
+img.aligncenter {
+  display: block !important;
+  margin: auto !important; }
+
 /* Header */
 /* WP Bar */
 #wpadminbar {
@@ -53,7 +57,7 @@ a {
 .content {
   max-width: 800px;
   width: 100%;
-  height: calc(100% - 84px);
+  min-height: calc(100% - 84px);
   bottom: calc(100% - 84px);
   margin: auto;
   margin-top: 20px;
@@ -69,5 +73,7 @@ a {
     border-bottom: 2px solid black; }
   .content .body {
     padding: 10px; }
+  .content a {
+    color: black; }
 
 /*# sourceMappingURL=style.css.map */
